@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document Classification using Convolutional Neural Networks</title>
+<!--      <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"> -->
+
+</head>
+
+<body>
+		<h1>Document Classification <span>Convolutional Neural Networks</span></h1>
+		<table>
+			<tr>
+   <th>Cancer Probability</th>
+   <th>PUI</th>
+   <th>Title</th>
+   <th>Source</th>
+ </tr>
+{% for result in results %}
+            <tr>
+                <td>{{ result[0] }}</td>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+		<td>{{ result[3] }}</td>
+            </tr>
+{% endfor %}
+</table>
+</body>
